@@ -36,4 +36,4 @@ Node.o:	Node.c
 .PHONY: clean all
 
 clean:
-	rm -f *.o server client selectclient selectserver Singelton Guard Reactor
+	rm -f *.o server client selectclient selectserver Singelton Guard Reactor main1

@@ -1,8 +1,13 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/matanel/Documents/GitHub/Ex-6-OS'
+gcc -Wall -g -c  Node.c
+gcc --shared -fPIC -pthread -Wall -g -c  Queue.c
+gcc main1.c --shared -fPIC -pthread  -o main1
+gcc client.cpp --shared -fPIC -pthread  -o client
+gcc selectclient.c --shared -fPIC -pthread  -o selectclient
+gcc selectserver.c --shared -fPIC -pthread  -o selectserver
+gcc Singelton.cpp --shared -fPIC -pthread  -o Singelton
+gcc Guard.cpp --shared -fPIC -pthread  -o Guard
 gcc Reactor.cpp --shared -fPIC -pthread  -o Reactor
 make: Leaving directory '/home/matanel/Documents/GitHub/Ex-6-OS'
  
-make: *** No rule to make target 'singleton.cpp', needed by 'singleton'.
-make: *** No rule to make target 'guard.cpp', needed by 'guard'.
-

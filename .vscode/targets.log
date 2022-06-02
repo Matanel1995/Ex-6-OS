@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun  2 13:26:05 2022
+# Make data base, printed on Thu Jun  2 13:32:07 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ O = -o
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:31644
+JOURNAL_STREAM = 8:28630
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -77,7 +77,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /snap/code/97/usr/share/code/code
 # environment
-MANAGERPID = 1172
+MANAGERPID = 1133
 # makefile (from 'makefile', line 4)
 lp = --shared -fPIC -pthread 
 # environment
@@ -93,7 +93,7 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/Matanel:@/tmp/.ICE-unix/1456,unix/Matanel:/tmp/.ICE-unix/1456
+SESSION_MANAGER = local/Matanel:@/tmp/.ICE-unix/1415,unix/Matanel:/tmp/.ICE-unix/1415
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -111,7 +111,7 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 003a23f1c5c44c0db1356cbf581a5876
+INVOCATION_ID = df1ab8be8c2841c8bde109bacdf58270
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/97/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -123,7 +123,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2874
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2210
 # automatic
 %F = $(notdir $%)
 # environment
@@ -139,7 +139,7 @@ Flag = -Wall -g -c
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1391
+SSH_AGENT_PID = 1352
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -191,7 +191,7 @@ CC = gcc
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-688f59c2-e611-481f-b8c5-e00c430671c6.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a6511154-d326-49bf-a4c3-49bf6fe690bb.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -261,9 +261,9 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2920
+VSCODE_PID = 2257
 # variable set hash-table stats:
-# Load=126/1024=12%, Rehash=0, Collisions=18/151=12%
+# Load=126/1024=12%, Rehash=0, Collisions=18/156=12%
 
 # Pattern-specific Variable Values
 
@@ -271,9 +271,9 @@ VSCODE_PID = 2920
 
 # Directories
 
-# . (device 2053, inode 1312080): 23 files, no impossibilities.
+# . (device 2053, inode 1312080): 17 files, no impossibilities.
 
-# 23 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -281,29 +281,31 @@ VSCODE_PID = 2920
 
 # Files
 
-all: main1 client selectclient selectserver singleton guard Reactor
- 
-make: *** No rule to make target 'singleton.cpp', needed by 'singleton'.  Stop.
-
+all: main1 client selectclient selectserver Singelton Guard Reactor
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
+ 
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has not been updated.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
 Queue.o: Node.o Queue.c
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-02 13:25:54.775417866
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from 'makefile', line 31):
 	$(CC) $(lp)$(Flag)  Queue.c
 
 client: client.cpp
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-02 13:25:54.875419518
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from 'makefile', line 19):
 	$(CC) client.cpp $(lp) $(O) client
 
@@ -319,17 +321,23 @@ Reactor.cpp:
 #  File has not been updated.
 
 # Not a target:
-guard.cpp:
+.SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-singleton: singleton.cpp
+Singelton: Singelton.cpp
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 22):
-	$(CC) singleton.cpp $(lp) $(O) singleton
+	$(CC) Singelton.cpp $(lp) $(O) Singelton
+
+# Not a target:
+Guard.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Node.c:
@@ -340,38 +348,34 @@ Node.c:
 
 selectclient: selectclient.c
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-02 13:10:47.379021291
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from 'makefile', line 16):
 	$(CC) selectclient.c $(lp) $(O) selectclient
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-02 13:25:51.395361818
+#  Last modified 2022-06-02 13:28:30.989477926
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 main1.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:12:12.395140173
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Queue.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-01 22:38:32.615949793
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 selectserver: selectserver.c
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-02 13:24:21.945671461
-#  File has been updated.
-#  Successfully updated.
+#  Modification time never checked.
+#  File has not been updated.
 #  recipe to execute (from 'makefile', line 13):
 	$(CC) selectserver.c $(lp) $(O) selectserver
 
@@ -390,17 +394,15 @@ Reactor: Reactor.cpp
 
 # Not a target:
 selectclient.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 13:10:43.523075166
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 client.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 13:10:45.81504315
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 clean:
 #  Phony target (prerequisite of .PHONY).
@@ -408,58 +410,78 @@ clean:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 39):
-	rm -f *.o server client
+	rm -f *.o server client selectclient selectserver Singelton Guard Reactor
 
-guard: guard.cpp
+Guard: Guard.cpp
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 25):
-	$(CC) guard.cpp $(lp) $(O) guard
+	$(CC) Guard.cpp $(lp) $(O) Guard
+
+# Not a target:
+Singelton.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 selectserver.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 13:19:51.105433484
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-singleton.cpp:
-#  Implicit rule search has been done.
-#  File does not exist.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
 
 Node.o: Node.c
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-02 13:25:45.435261682
+#  Implicit/static pattern stem: ''
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := Node.o
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := Node.c
+# automatic
+# | := 
+# automatic
+# < := Node.c
+# automatic
+# ^ := Node.c
+# automatic
+# ? := Node.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=3/13=23%
 #  recipe to execute (from 'makefile', line 34):
 	$(CC) $(Flag)  Node.c
 
 main1: Queue.o main1.c
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-02 13:25:54.827418725
+#  Last modified 2022-06-02 13:27:07.604501055
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from 'makefile', line 10):
 	$(CC) main1.c $(lp) $(O) main1
 
 # files hash-table stats:
-# Load=24/1024=2%, Rehash=0, Collisions=1/65=2%
+# Load=24/1024=2%, Rehash=0, Collisions=1/66=2%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 325 B / avg = 9 B
-# current buf: size = 8162 B / used = 325 B / count = 35 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 294 B / avg = 9 B
+# current buf: size = 8162 B / used = 294 B / count = 32 / avg = 9 B
 
-# strcache performance: lookups = 76 / hit rate = 53%
+# strcache performance: lookups = 71 / hit rate = 54%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=1/76=1%
-# Finished Make data base on Thu Jun  2 13:26:05 2022
+# Load=32/8192=0%, Rehash=0, Collisions=1/71=1%
+# Finished Make data base on Thu Jun  2 13:32:07 2022
 
  
