@@ -1,0 +1,8 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/matanel/Documents/GitHub/Ex-6-OS'
+gcc Reactor.cpp --shared -fPIC -pthread  -o Reactor
+make: Leaving directory '/home/matanel/Documents/GitHub/Ex-6-OS'
+ 
+make: *** No rule to make target 'singleton.cpp', needed by 'singleton'.
+make: *** No rule to make target 'guard.cpp', needed by 'guard'.
+
